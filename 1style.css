@@ -1,0 +1,306 @@
+/* Default Styling */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    inline-size: 100%;
+    background: #0c111b;
+    position: relative;
+    font-family: roboto, sans-serif;
+}
+
+/*navigation styling*/
+
+.navbar{
+    inline-size: 100%;
+    block-size: 80px;
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    padding: 0 4%;
+    background: #0c111b;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+}
+.brand-logo{
+    block-size: 70px;
+}
+.nav-links{
+    margin-block-start: 10px;
+    display: flex;
+    list-style: none;
+}
+.nav-items a{
+  text-decoration: none;
+  margin-inline-start: 20px;
+  text-transform: capitalize;
+  color: #ffff;
+  opacity: 0.5;
+}
+
+/* nav a)Search and login button*/
+.right-container{
+    display: block;
+    margin-inline-start: auto;
+}
+.search-box{
+    border: none;
+    border-block-end: 1px solid #ffff;
+    background: transparent;
+    outline: none;
+    block-size: 30px;
+    color: #ffff;
+    inline-size: 250px;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    transition: .5s;
+}
+.search-box:focus{
+    inline-size: 400px;
+    border-color: #1f80e0;
+}
+.sub-btn{
+    background: #1f80e0;
+    block-size: 30px;
+    padding: 0 20px;
+    color: #ffff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700px;
+    font-size: 12px;
+    margin: 0 10px;
+}
+.login-link{
+    color: #ffff;
+    opacity: .5s;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Slides */
+.caraousel-container{
+    position: relative;
+    inline-size: 100%;
+    block-size: 450px;
+    padding: 20px 0;
+    overflow-x: hidden;
+    margin-block-start: 80px;
+}
+.caraousel{
+    display: flex;
+    inline-size: 92%;
+    block-size: 100%;
+    position: relative;
+    margin: auto;
+}
+.slider{
+    flex: 0 0 auto;
+    margin-inline-end: 30px;
+    position: relative;
+    background: rgba(0 0 0 0.5);
+    border-radius: 5px;
+    inline-size: 100%;
+    block-size: 100%;
+    inset-inline-start: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+.slider img{
+    inline-size: 70%;
+    min-block-size: 100%;
+    object-fit: cover;
+    display: block;
+    margin-inline-start: auto;
+}
+.slide-content{
+    position: absolute;
+    inline-size: 50%;
+    block-size: 100%;
+    z-index: 2;
+    background: linear-gradient(to right, #030b17 80%, #0c111b00);
+    color: #ffff;
+}
+.movie-title{
+    padding-inline-start: 50px;
+    text-transform: capitalize;
+    margin-block-start: 80px;
+}
+.movie-des{
+  inline-size: 80%;
+  line-height: 30px;
+  margin-block-start: 30px;
+  opacity: 0.8;
+}
+
+/*  Video Cards*/
+.video-card-container{
+    position: relative;
+    inline-size: 10%;
+    margin: auto;
+    block-size: 10vw;
+    display: flex;
+    margin-block-end: 20px;
+    justify-content: space-between;
+}
+.video-card{
+    position: relative;
+    min-inline-size: calc(100%/5-10px);
+    inline-size: calc(100%/5 - 10px);
+    block-size: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #030b17;
+}
+.video-card-image, .card-video{
+    inline-size: 100%;
+    block-size:  100%;
+    object-fit: cover;
+}
+.card-video{
+    position: absolute;
+}
+.video-card:hover .video-card-image{
+    display: none;
+}
+
+/* Recommended for you*/
+.title{
+    color: #ffff;
+    opacity: 0.9;
+    padding-inline-start: 4%;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 200;
+}
+.movies-list{
+    inline-size: 100%;
+    block-size: 220px;
+    position: relative;
+    margin: 10px 0 20px;
+}
+.card-container{
+    position: relative;
+    inline-size: 92%;
+    padding-inline-start: 10px;
+    block-size: 220px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+}
+.card-container::-webkit-scrollbar{
+    display: none;
+}
+.card{
+    position: relative;
+    min-inline-size: 150px;
+    inline-size: 150px;
+    block-size: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-inline-end: 100px;
+    transition: .5s;
+}
+.card-img{
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+}.card:hover{
+    transform: scale(1.1);
+}
+.card:hover .card-body{
+    opacity: 1;
+}
+.card-body{
+    opacity: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(0 0 15 0), #192133 90%);
+    padding: 10px;
+    transition: .5s;
+}
+.name{
+    color: #ffff;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-block-start: 60%;
+}
+.des{
+    color: #ccc;
+    opacity: 0.8;
+    margin: 5px 0;
+    font-weight: 500;
+    font-size: 12px;
+}
+.watchlist-btn{
+    position: relative;
+    inline-size: 100%;
+    text-transform: capitalize;
+    background: none;
+    border: none;
+    font-weight: 500;
+    text-align: end;
+    color: rgba(255, 255,255, 0.5);
+    margin: 5px 0;
+    cursor: pointer;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+.watchlist-btn::before{
+    content: '';
+    position: absolute;
+    inset-block-start: 0;
+    block-size: 35px;
+    inline-size: 35px;
+    background: url(Images/add.jpg);
+    background-size: cover;
+    transform: scale(0.4);
+}
+.watchlist-btn:hover{
+    color: #ccc;
+    background: rgba(255,255,255,0.5);
+}
+.pre-btn, 
+.nxt-btn{
+    position: absolute;
+    inset-block-start: 0;
+    inline-size: 5%;
+    block-size: 100%;
+    z-index: 2;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.pre-btn{
+    inset-inline-start: 0;
+    background: linear-gradient(to right, #0c111b 0%, #0c111b00);
+}
+.nxt-btn{
+    inset-inline-end: 0;
+    background: linear-gradient(to left, #0c111b 0%, #0c111b00);
+}
+.pre-btn img, 
+.nxt-btn img{
+    inline-size: 15px;
+    block-size: 20px;
+    opacity: 0;
+}
+.pre-btn:hover img, 
+.next-btn:hover img{
+    opacity: 1;
+}
